@@ -3,27 +3,10 @@ package com.telRan.GlobalCVBank.tests;
 import com.telRan.GlobalCVBank.data.UserFormData;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class RegisterUserTests extends TestBase {
-    @BeforeMethod
-    public void ensurePreconditions() {
-        if (!loggedIn()) {
 
-            login();
-        }
-
-    }
-
-    @AfterMethod
-    public void finishTest() {
-
-        singOut();
-
-
-    }
 
     @Test
     public void testRegisterUserByRegisterButton() {
