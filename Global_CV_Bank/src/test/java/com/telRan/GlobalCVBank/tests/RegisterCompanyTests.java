@@ -6,19 +6,19 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RegisterCompanyTests extends TestBase {
-
+    String email = "dvd+" + System.currentTimeMillis() + "@gmail.com";
 
     @Test
     public void testRegisterCompanyByButtonRegister() {
 
-        clickOnButtonRegister();
-        clickOnCompany();
-        fillRegistrationCompanyForm(new CompanyFormData().setCompName("Les BgS").setWebsite("https://www.bgs.com").setCountry("Israel").setCity("Ashkelon").setStreet("Bar Kokhva").setBuilding("209").
+        app.getNavigationHelper().clickOnButtonRegister();
+        app.getNavigationHelper().clickOnCompany();
+        app.getRegisterCompanyHelper().fillRegistrationCompanyForm(new CompanyFormData().setCompName("Les BgS").setWebsite("https://www.bgs.com").setCountry("Israel").setCity("Ashkelon").setStreet("Bar Kokhva").setBuilding("209").
                 setPostcode("750330").setPhone("+972545100000").setFirstName("David").setLastName("Pinto").setPosition("QA Automation").setEmail(email).setPassword("1234abcd").setConfirmPassword("1234abcd"));
 
-        Assert.assertTrue(wd.findElement(By.xpath("//div[@class='message-box']")).isDisplayed());
+        Assert.assertTrue(app.wd.findElement(By.xpath("//div[@class='message-box']")).isDisplayed());
 
-        clickOnButtonClose();
+        app.getNavigationHelper().clickOnButtonClose();
     }
 
 }

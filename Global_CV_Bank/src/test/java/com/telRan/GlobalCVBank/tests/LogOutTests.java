@@ -1,6 +1,5 @@
 package com.telRan.GlobalCVBank.tests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -9,15 +8,15 @@ public class LogOutTests extends TestBase {
     @BeforeMethod
     public void ensurePreconditions(){
 
-        if(!isLoggedIn()){
+        if(!app.getLoginHelper().isLoggedIn()){
 
-            login();
+            app.getLoginHelper().login();
         }
     }
     @Test
     public void testLogOut(){
 
-        signOut();
+        app.getLogOutHelper().signOut();
     }
 
 }

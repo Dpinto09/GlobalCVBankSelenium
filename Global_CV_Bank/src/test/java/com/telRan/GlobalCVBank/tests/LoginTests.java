@@ -7,6 +7,6 @@ public class LoginTests extends TestBase {
     @Test
     public void testLogin(){
 
-       login();
+       app.getLoginHelper().login();
     }
 }

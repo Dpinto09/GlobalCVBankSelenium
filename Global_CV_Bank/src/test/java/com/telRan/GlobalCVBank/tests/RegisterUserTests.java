@@ -6,16 +6,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RegisterUserTests extends TestBase {
-
-
+    String email = "dvd+" + System.currentTimeMillis() + "@gmail.com";
+    String password = "1234abcd";
     @Test
     public void testRegisterUserByRegisterButton() {
-        clickOnButtonRegister();
-        fillRegistrationUserForm(new UserFormData().setFirstName("David").setLastName("Pinto").setEmail(email).setPhone("+972585357284").setPassword(password).setConfirmPassword(password));
+        app.getNavigationHelper().clickOnButtonRegister();
+        app.getRegisterUserHelper().fillRegistrationUserForm(new UserFormData().setFirstName("David").setLastName("Pinto").setEmail(email).setPhone("+972585357284").setPassword(password).setConfirmPassword(password));
 
-        Assert.assertTrue(wd.findElement(By.xpath("//div[@class='message-box']")).isDisplayed());
+        Assert.assertTrue(app.wd.findElement(By.xpath("//div[@class='message-box']")).isDisplayed());
 
-        clickOnButtonClose();
+        app.getNavigationHelper().clickOnButtonClose();
 
     }
 
@@ -23,13 +23,13 @@ public class RegisterUserTests extends TestBase {
     @Test
     public void testRegistrationUserByButtonLogin() {
 
-        clickOnButtonLogin();
-        clickOnCreateAccount();
-        fillRegistrationUserForm(new UserFormData().setFirstName("David").setLastName("Pinto").setEmail(email).setPhone("+972585357284").setPassword("1234abcd").setConfirmPassword("1234abcd"));
+        app.getNavigationHelper().clickOnButtonLogin();
+        app.getNavigationHelper().clickOnCreateAccount();
+        app.getRegisterUserHelper().fillRegistrationUserForm(new UserFormData().setFirstName("David").setLastName("Pinto").setEmail(email).setPhone("+972585357284").setPassword("1234abcd").setConfirmPassword("1234abcd"));
 
-        Assert.assertTrue(wd.findElement(By.xpath("//div[@class='message-box']")).isDisplayed());
+        Assert.assertTrue(app.wd.findElement(By.xpath("//div[@class='message-box']")).isDisplayed());
 
-        clickOnButtonClose();
+        app.getNavigationHelper().clickOnButtonClose();
     }
 
 }
