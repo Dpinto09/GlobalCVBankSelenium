@@ -1,53 +1,50 @@
-package com.telRan.GlobalCVBank.data;
+package com.telRan.GlobalCVBank.model;
 
 public class CVFormData {
-    private String titleCV;
-    private String firstName;
-    private String lastName;
-    private String birthday;
-    private String summary;
-    private String about;
-    private String phone;
-    private String email;
-    private String address;
-    private String preferableArea;
-    private String preferablePosition;
-    private String salaryFrom;
-    private String salaryTill;
-    private String school;
-    private String degree;
-    private String educationGraduationYear;
-    private String educationDescription;
-    private String skills;
-    private String company;
-    private String positionInCompany;
-    private String yearFrom;
-    private String yearTill;
-    private String projectDescription;
-    private String achievementDescription;
-    private String achievementGraduationYear;
-    private String certificationDescription;
-    private String certificationYear;
-    private String language;
-    private String linkLinkedIn;
-    private String linkGitHub;
-    private String linkPortfolio;
-    private String recommendations;
+    private  String cvTitle;
+    private  String firstName;
+    private  String lastName;
+    private  String birthday;
+    private  String summary;
+    private  String about;
+    private  String phone;
+    private  String email;
+    private  String residence;
+    private  String preferableArea;
+    private  String preferablePosition;
+    private  String salaryFrom;
+    private  String salaryTill;
+    private  String school;
+    private  String degree;
+    private  String schoolGraduationYear;
+    private  String description;
+    private  String company;
+    private  String position;
+    private  String yearFrom;
+    private  String yearTill;
+    private  String jobDescription;
+    private  String achievementDescription;
+    private  String achievementYear;
+    private  String certificationDescription;
+    private  String certificationYear;
+    private  int countLanguage;
+    private  String languageName;
+    private  String linkedLink;
+    private  String gitHubLink;
+    private  String portfolioLink;
+    private  String recommendations;
 
-    public CVFormData setTitleCV(String titleCV) {
-        if(titleCV != null)
-        this.titleCV = titleCV;
+    public CVFormData setCvTitle(String cvTitle) {
+        this.cvTitle = cvTitle;
         return this;
     }
 
     public CVFormData setFirstName(String firstName) {
-        if(firstName != null)
         this.firstName = firstName;
         return this;
     }
 
     public CVFormData setLastName(String lastName) {
-       if(lastName != null)
         this.lastName = lastName;
         return this;
     }
@@ -77,8 +74,8 @@ public class CVFormData {
         return this;
     }
 
-    public CVFormData setAddress(String address) {
-        this.address = address;
+    public CVFormData setResidence(String residence) {
+        this.residence = residence;
         return this;
     }
 
@@ -107,24 +104,18 @@ public class CVFormData {
         return this;
     }
 
-    public CVFormData setEducationGraduationYear(String educationGraduationYear) {
-        this.educationGraduationYear = educationGraduationYear;
-        return this;
-    }
-
     public CVFormData setDegree(String degree) {
         this.degree = degree;
         return this;
     }
 
-
-    public CVFormData setEducationDescription(String educationDescription) {
-        this.educationDescription = educationDescription;
+    public CVFormData setSchoolGraduationYear(String schoolGraduationYear) {
+        this.schoolGraduationYear = schoolGraduationYear;
         return this;
     }
 
-    public CVFormData setSkills(String skills) {
-        this.skills = skills;
+    public CVFormData setDescription(String description) {
+        this.description = description;
         return this;
     }
 
@@ -133,8 +124,8 @@ public class CVFormData {
         return this;
     }
 
-    public CVFormData setPositionInCompany(String positionInCompany) {
-        this.positionInCompany = positionInCompany;
+    public CVFormData setPosition(String position) {
+        this.position = position;
         return this;
     }
 
@@ -148,8 +139,8 @@ public class CVFormData {
         return this;
     }
 
-    public CVFormData setProjectDescription(String projectDescription) {
-        this.projectDescription = projectDescription;
+    public CVFormData setJobDescription(String jobDescription) {
+        this.jobDescription = jobDescription;
         return this;
     }
 
@@ -158,8 +149,8 @@ public class CVFormData {
         return this;
     }
 
-    public CVFormData setAchievementGraduationYear(String achievementGraduationYear) {
-        this.achievementGraduationYear = achievementGraduationYear;
+    public CVFormData setAchievementYear(String achievementYear) {
+        this.achievementYear = achievementYear;
         return this;
     }
 
@@ -173,33 +164,38 @@ public class CVFormData {
         return this;
     }
 
-    public CVFormData setLanguage(String language) {
-        this.language = language;
+    public CVFormData setCountLanguage(int countLanguage) {
+        this.countLanguage = countLanguage;
         return this;
     }
 
-    public CVFormData setLinkLinkedIn(String linkLinkedIn) {
-        this.linkLinkedIn = linkLinkedIn;
+    public CVFormData setLanguageName(String languageName) {
+        this.languageName = languageName;
         return this;
     }
 
-    public CVFormData setLinkGitHub(String linkGitHub) {
-        this.linkGitHub = linkGitHub;
+    public CVFormData setLinkedLink(String linkedLink) {
+        this.linkedLink = linkedLink;
         return this;
     }
 
-    public CVFormData setLinkPortfolio(String linkPortfolio) {
-        this.linkPortfolio = linkPortfolio;
+    public CVFormData setGitHubLink(String gitHubLink) {
+        this.gitHubLink = gitHubLink;
+        return this;
+    }
+
+    public CVFormData setPortfolioLink(String portfolioLink) {
+        this.portfolioLink = portfolioLink;
         return this;
     }
 
     public CVFormData setRecommendations(String recommendations) {
         this.recommendations = recommendations;
-        return this;
+    return this;
     }
 
-    public String getTitleCV() {
-        return titleCV;
+    public String getCvTitle() {
+        return cvTitle;
     }
 
     public String getFirstName() {
@@ -230,8 +226,8 @@ public class CVFormData {
         return email;
     }
 
-    public String getAddress() {
-        return address;
+    public String getResidence() {
+        return residence;
     }
 
     public String getPreferableArea() {
@@ -258,24 +254,20 @@ public class CVFormData {
         return degree;
     }
 
-    public String getEducationGraduationYear() {
-        return educationGraduationYear;
+    public String getSchoolGraduationYear() {
+        return schoolGraduationYear;
     }
 
-    public String getEducationDescription() {
-        return educationDescription;
-    }
-
-    public String getSkills() {
-        return skills;
+    public String getDescription() {
+        return description;
     }
 
     public String getCompany() {
         return company;
     }
 
-    public String getPositionInCompany() {
-        return positionInCompany;
+    public String getPosition() {
+        return position;
     }
 
     public String getYearFrom() {
@@ -286,16 +278,16 @@ public class CVFormData {
         return yearTill;
     }
 
-    public String getProjectDescription() {
-        return projectDescription;
+    public String getJobDescription() {
+        return jobDescription;
     }
 
     public String getAchievementDescription() {
         return achievementDescription;
     }
 
-    public String getAchievementGraduationYear() {
-        return achievementGraduationYear;
+    public String getAchievementYear() {
+        return achievementYear;
     }
 
     public String getCertificationDescription() {
@@ -306,20 +298,24 @@ public class CVFormData {
         return certificationYear;
     }
 
-    public String getLanguage() {
-        return language;
+    public int getCountLanguage() {
+        return countLanguage;
     }
 
-    public String getLinkLinkedIn() {
-        return linkLinkedIn;
+    public String getLanguageName() {
+        return languageName;
     }
 
-    public String getLinkGitHub() {
-        return linkGitHub;
+    public String getLinkedLink() {
+        return linkedLink;
     }
 
-    public String getLinkPortfolio() {
-        return linkPortfolio;
+    public String getGitHubLink() {
+        return gitHubLink;
+    }
+
+    public String getPortfolioLink() {
+        return portfolioLink;
     }
 
     public String getRecommendations() {

@@ -1,23 +1,23 @@
-package com.telRan.GlobalCVBank.data;
+package com.telRan.GlobalCVBank.model;
 
 public class CompanyFormData {
-    private String compName;
-    private String website;
-    private String country;
-    private String city;
-    private String street;
-    private String building;
-    private String postcode;
-    private String phone;
-    private String firstName;
-    private String lastName;
-    private String position;
-    private String email;
-    private String password;
-    private String confirmPassword;
+    private  String companyName;
+    private  String website;
+    private  String country;
+    private  String city;
+    private  String street;
+    private  String building;
+    private  String postcode;
+    private  String phone;
+    private  String firstName;
+    private  String lastName;
+    private  String position;
+    private  String email;
+    private  String password;
+    private  String repeatPassword;
 
-    public CompanyFormData setCompName(String compName) {
-        this.compName = compName;
+    public CompanyFormData setCompanyName(String companyName) {
+        this.companyName = companyName;
         return this;
     }
 
@@ -81,13 +81,13 @@ public class CompanyFormData {
         return this;
     }
 
-    public CompanyFormData setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
-        return this;
+    public CompanyFormData setRepeatPassword(String repeatPassword) {
+        this.repeatPassword = repeatPassword;
+    return this;
     }
 
-    public String getCompName() {
-        return compName;
+    public String getCompanyName() {
+        return companyName;
     }
 
     public String getWebsite() {
@@ -138,7 +138,7 @@ public class CompanyFormData {
         return password;
     }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
+    public String getRepeatPassword() {
+        return repeatPassword;
     }
 }

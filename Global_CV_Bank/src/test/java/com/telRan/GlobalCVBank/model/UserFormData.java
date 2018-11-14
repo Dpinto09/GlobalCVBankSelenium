@@ -1,4 +1,4 @@
-package com.telRan.GlobalCVBank.data;
+package com.telRan.GlobalCVBank.model;
 
 public class UserFormData {
     private String firstName;
@@ -6,7 +6,7 @@ public class UserFormData {
     private String email;
     private String phone;
     private String password;
-    private String confirmPassword;
+    private String repeatPassword;
 
 
     public UserFormData setFirstName(String firstName) {
@@ -34,9 +34,9 @@ public class UserFormData {
         return this;
     }
 
-    public UserFormData setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
-        return this;
+    public UserFormData setRepeatPassword(String repeatPassword) {
+        this.repeatPassword = repeatPassword;
+    return this;
     }
 
     public String getFirstName() {
@@ -47,6 +47,10 @@ public class UserFormData {
         return lastName;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -55,14 +59,7 @@ public class UserFormData {
         return password;
     }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
+    public String getRepeatPassword() {
+        return repeatPassword;
     }
-
-    public String getEmail() {
-        return email;
-
-    }
-
-
 }
